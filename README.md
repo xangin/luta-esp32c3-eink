@@ -7,11 +7,11 @@ ESPhome code for Luta-esp32c3 module with e-ink display
 
 - 正面硬體外觀:
 
-
+<img src="https://i.imgur.com/iA85DBX.jpg" width="50%" />
 
 - 背面硬體外觀:
 
-
+<img src="https://i.imgur.com/2pRsxEy.jpg" width="50%" />
 
 | I/O定義 | Pin name  |	ESP32C3 |
 |:----:|:----:|:----:|
