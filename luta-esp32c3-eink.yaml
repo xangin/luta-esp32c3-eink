@@ -72,12 +72,12 @@ sensor:
     name: "${device_name} WiFi Signal"
     update_interval: 120s
 
-  #REPLACE WITH YOUR SENSOR ENTITY ID
+  #REPLACE WITH YOUR SENSOR'S ENTITY ID
   - platform: homeassistant
     entity_id: sensor.kids_room_temperature
     id: temp_data
     
-  #REPLACE WITH YOUR SENSOR ENTITY ID
+  #REPLACE WITH YOUR SENSOR'S ENTITY ID
   - platform: homeassistant
     entity_id: sensor.kids_room_humidity
     id: hum_data 
