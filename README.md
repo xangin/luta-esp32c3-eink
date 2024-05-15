@@ -70,6 +70,24 @@ binary_sensor:
 
 ```
 
+### LED 控制
+
+有2顆LED，可以用來當狀態的LED燈或是手動控制開關都可以
+
+```YAML
+switch:
+  - platform: gpio
+    name: "${device_name} D5 LED"
+    pin: GPIO13
+    id: relay
+```
+
+```YAML
+status_led:
+  pin:
+    number: GPIO12
+```
+
 ### 在HA控制換頁
 
 有2個按鈕，按下去分別會去顯示p1(Time Page)與p2(Message Page)，如果有要再新增更多頁可以再仿照程式碼再新增
@@ -91,24 +109,6 @@ button:
       then:
         - display.page.show: p2
         - component.update: my_display
-```
-
-### LED 控制
-
-有2顆LED，可以用來當狀態的LED燈或是手動控制開關都可以
-
-```YAML
-switch:
-  - platform: gpio
-    name: "${device_name} D5 LED"
-    pin: GPIO13
-    id: relay
-```
-
-```YAML
-status_led:
-  pin:
-    number: GPIO12
 ```
 
 ### 根據Wi-Fi強度顯示圖示
