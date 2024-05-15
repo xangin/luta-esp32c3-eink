@@ -1,5 +1,5 @@
-# luta-esp32c3-eink
-ESPhome code for Luta-esp32c3 module with e-ink display
+# luat-esp32c3-eink
+ESPhome code for Luat-esp32c3 module with e-ink display
 
 ## Hardware 硬體架構
 
@@ -29,7 +29,7 @@ ESPhome code for Luta-esp32c3 module with e-ink display
 
 ## Installation 安裝方式
 
-1. 將`luta-esp32c3-eink.yaml`的內容修改成自己想要的內容 **解說在下方**
+1. 將`luat-esp32c3-eink.yaml`的內容修改成自己想要的內容 **解說在下方**
 2. 按右上角`INSTALL`選`Manual Download`編譯完成選`Modern format`下載編譯好的檔案
 3. 按住模組上的BOOT後再插上電腦
 4. 用Chrome或 Edge瀏覽器開啟 <https://web.esphome.io/>
