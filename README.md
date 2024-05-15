@@ -43,7 +43,8 @@ ESPhome code for Luta-esp32c3 module with e-ink display
 ### 實體按鈕
 
 GPIO5, GPIO8分別代表兩個按鈕可用來前後換頁，或不寫功能寫上name，在HA就會變成一個無線按鈕
-就用來當自動化的觸發，進而控制HA內的其他裝置
+
+可當自動化的觸發，進而控制HA內的其他裝置
 
 ```YAML
 binary_sensor:
