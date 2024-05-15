@@ -31,6 +31,7 @@ captive_portal:
 
 time:
   - platform: sntp
+  - platform: homeassistant  
     id: sntp_time
     timezone: Asia/Taipei
 
