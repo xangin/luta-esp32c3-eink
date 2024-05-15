@@ -1,9 +1,8 @@
 substitutions:
-  device_name: c3-eink-msg2
+  device_name: esp32c3-eink
 
 esphome:
-  name: esp32c3-eink-msg2
-
+  name: luta-esp32c3-eink
 
 esp32:
   board: airm2m_core_esp32c3
@@ -13,29 +12,20 @@ esp32:
 # Enable logging
 logger:
   baud_rate: 0
-
   
 # Enable Home Assistant API
 api:
-  reboot_timeout: 1h
 
 ota:
-  password: !secret my_ap_password
 
 wifi:
-  networks:
-    - ssid: !secret my_ap_ssid
-      password: !secret my_ap_password
-    - ssid: !secret my_phone_ap_ssid
-      password: !secret my_phone_ap_password
-
+  ssid: !secret my_ap_ssid
+  password: !secret my_ap_password
   
   # Enable fallback hotspot (captive portal) in case wifi connection fails
   ap:
-    ssid: "c3-eink-msg2"
+    ssid: "luta-esp32c3-eink"
     password: "12345678"
-
-web_server:
 
 captive_portal:
 
@@ -51,6 +41,7 @@ binary_sensor:
 
   - platform: gpio
     id: button_io5
+    name: "${device_name} IO5"
     pin:
       number: GPIO05
       mode: INPUT_PULLUP
@@ -62,7 +53,7 @@ binary_sensor:
 
   - platform: gpio
     id: button_io8
-    name: "
+    name: "${device_name} IO8"
     pin:
       number: GPIO08
       mode: INPUT_PULLUP
@@ -80,10 +71,12 @@ sensor:
     name: "${device_name} WiFi Signal"
     update_interval: 120s
 
+  #REPLACE WITH YOUR SENSOR ENTITY ID
   - platform: homeassistant
     entity_id: sensor.kids_room_temperature
     id: temp_data
-
+    
+  #REPLACE WITH YOUR SENSOR ENTITY ID
   - platform: homeassistant
     entity_id: sensor.kids_room_humidity
     id: hum_data 
