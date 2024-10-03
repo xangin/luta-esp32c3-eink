@@ -17,7 +17,8 @@ logger:
 api:
 
 ota:
-
+  - platform: esphome #fix 2024.6 issue
+  
 wifi:
   ssid: !secret my_ap_ssid
   password: !secret my_ap_password
