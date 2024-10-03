@@ -85,7 +85,9 @@ sensor:
 switch:
   - platform: gpio
     name: "${device_name} D5 LED"
-    pin: GPIO13
+    pin: 
+      number: GPIO13
+      ignore_pin_validation_error: true
     id: relay
 
 button:
@@ -110,7 +112,8 @@ button:
 status_led:
   pin:
     number: GPIO12
-
+    ignore_pin_validation_error: true
+    
 font:
   - file: "fonts/GothamRnd-Book.ttf"
     id: time_font
